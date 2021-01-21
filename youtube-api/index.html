@@ -1,0 +1,141 @@
+<h1 id="a-quick-guide-to-youtube-search-api-available-on-https-rapidapi-com-shekhar1000-sc-api-youtube-advanced-search-">A quick guide to Youtube Search APi available on : <a href="https://rapidapi.com/shekhar1000.sc/api/youtube-advanced-search/">https://rapidapi.com/shekhar1000.sc/api/youtube-advanced-search/</a></h1>
+<h3 id="basics">Basics</h3>
+<p>The Api takes following parameters : </p>
+<ol>
+<li>query #The search query</li>
+<li>count #Number of results you want. (The bigger the number, more time it takes)</li>
+<li>filters #Filters you want to apply. (Filters documentation can be found <a href="#filter-documentation">here</a></li>
+</ol>
+<h3 id="usage">Usage</h3>
+<p>A Quick Example of how to use the API:</p>
+<p>url = &quot;<a href="https://youtube-advanced-search.p.rapidapi.com/search">https://youtube-advanced-search.p.rapidapi.com/search</a>&quot;</p>
+<p>querystring = {
+    &quot;query&quot;:&quot;hello&quot;, # Defines the search word
+    &quot;count&quot;:&quot;1&quot;, # Defines count of Search results
+    &quot;filters&quot;:&quot;udlh&quot; # Filters to apply on results
+    }</p>
+<p>headers = {
+    &#39;x-rapidapi-key&#39;: &quot;Your API Key&quot;,
+    &#39;x-rapidapi-host&#39;: &quot;youtube-advanced-search.p.rapidapi.com&quot;
+    }</p>
+<p>response = requests.request(&quot;GET&quot;, url, headers=headers, params=querystring)</p>
+<p>print(response.text)</p>
+<h3 id="filter-documentation">Filter Documentation</h3>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>filter name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Upload Date : Last Hour</td>
+<td>udlh</td>
+</tr>
+<tr>
+<td>Upload Date : Today</td>
+<td>udtd</td>
+</tr>
+<tr>
+<td>Upload Date : This Week</td>
+<td>udtw</td>
+</tr>
+<tr>
+<td>Upload Date : This Month</td>
+<td>udtm</td>
+</tr>
+<tr>
+<td>Upload Date : This Year</td>
+<td>udty</td>
+</tr>
+<tr>
+<td>Type : Video</td>
+<td>tyvi</td>
+</tr>
+<tr>
+<td>Type : Channel</td>
+<td>tych</td>
+</tr>
+<tr>
+<td>Type : Playlist</td>
+<td>typl</td>
+</tr>
+<tr>
+<td>Type : Film</td>
+<td>tyfi</td>
+</tr>
+<tr>
+<td>Type : Programme</td>
+<td>typr</td>
+</tr>
+<tr>
+<td>Duration : Short (&lt; 4 Minutes)</td>
+<td>dush</td>
+</tr>
+<tr>
+<td>Duration : Long (&gt; 20 Minutes)</td>
+<td>dulo</td>
+</tr>
+<tr>
+<td>Features : Live</td>
+<td>feli</td>
+</tr>
+<tr>
+<td>Features : 4K</td>
+<td>fe4k</td>
+</tr>
+<tr>
+<td>Features : HD</td>
+<td>fehd</td>
+</tr>
+<tr>
+<td>Features : Subtitles/CC</td>
+<td>fesu</td>
+</tr>
+<tr>
+<td>Features : Creative Commons</td>
+<td>fecc</td>
+</tr>
+<tr>
+<td>Features : 360</td>
+<td>fe36</td>
+</tr>
+<tr>
+<td>Features : VR180</td>
+<td>fevr</td>
+</tr>
+<tr>
+<td>Features : 3D</td>
+<td>fe3d</td>
+</tr>
+<tr>
+<td>Features : HDR</td>
+<td>fehd</td>
+</tr>
+<tr>
+<td>Features : Location</td>
+<td>felo</td>
+</tr>
+<tr>
+<td>Features : Purchased</td>
+<td>fepu</td>
+</tr>
+<tr>
+<td>Sort By : Relevance</td>
+<td>sore</td>
+</tr>
+<tr>
+<td>Sort By : Upload date</td>
+<td>soup</td>
+</tr>
+<tr>
+<td>Sort By : View Count</td>
+<td>sovi</td>
+</tr>
+<tr>
+<td>Sort By : Rating</td>
+<td>sora</td>
+</tr>
+</tbody>
+</table>
